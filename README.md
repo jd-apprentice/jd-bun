@@ -2,6 +2,22 @@
 
 Sample bun template with Turso DB, eslint, prettier, docker, husky, sonarjs, testing with coverage, and more.
 
+## 📚 Features
+
+- ✅ [Turso](https://turso.tech)
+- ✅ [Kysely](https://www.kysely.dev/)
+- ✅ [Eslint](https://eslint.org/)
+- ✅ [eslint-sonarjs](https://github.com/SonarSource/eslint-plugin-sonarjs)
+- ✅ [Prettier](https://prettier.io/)
+- ✅ [Husky](https://typicode.github.io/husky/)
+- ✅ [Jsdocs](https://jsdoc.app/)
+- ✅ Jsconfig with checkjs and strict
+- ✅ Docker ready
+- ✅ Bun ready
+- ✅ Bun testing with coverage
+- ✅ Path aliases
+- ✅ Types
+
 ## 🧰 Requirements
 
 - Bun (^1.1.13)

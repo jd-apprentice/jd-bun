@@ -28,6 +28,17 @@
  * SOFTWARE.
  */
 
+/**
+ * @description The main class of the application
+ * @example
+ *
+ * const app = new SampleApp();
+ *
+ * console.log(app.sampleMethod());
+ *
+ * // Output: Hello World!
+ */
+
 export class SampleApp {
   constructor() {}
 
