@@ -38,6 +38,7 @@ jobs:
 
       - name: generate documentation
         run: |
+          bun install
           bun run docs
 
       - name: Upload artifact
