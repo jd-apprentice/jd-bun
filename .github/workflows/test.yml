@@ -4,11 +4,15 @@ on:
   workflow_dispatch:
   push:
     branches: [ "develop", "master" ]
+    paths:
+      - 'src/**'
+      - '__tests__/**'
   pull_request:
     branches: [ "develop", "master" ]
-  paths:
-    - 'src/**'
-    - '__tests__/**'
+    paths:
+      - 'src/**'
+      - '__tests__/**'
+
 
 jobs:
   test:
