@@ -1,0 +1,43 @@
+{
+  "name": "app_name",
+  "version": "1.0.0",
+  "author": "Jonathan Dyallo",
+  "main": "lib/app_name",
+  "dependencies": {
+    "@libsql/kysely-libsql": "^0.3.0",
+    "dotenv": "^16.4.5",
+    "kysely": "^0.27.3"
+  },
+  "description": "template for a bun project",
+  "imports": {
+    "#config": "./src/config.js",
+    "#db": "./src/db.js",
+    "#types": "./@types/index.d.ts"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "scripts": {
+    "build": "bun build ./app.js --compile --outfile lib/app_name",
+    "start": "bun lib/app_name",
+    "dev": "bun --watch app.js",
+    "test": "bun test --coverage",
+    "docs": "jsdoc ./src/*.js -d ./docs",
+    "lint": "eslint ./src/*.js",
+    "lint:fix": "eslint ./src/*.js --fix",
+    "format": "prettier --check ./src/*.js",
+    "format:write": "prettier --write ./src/*.js",
+    "prepare": "husky"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@eslint/js": "^9.6.0",
+    "@types/bun": "^1.1.6",
+    "eslint": "9.x",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-sonarjs": "^1.0.3",
+    "globals": "^15.6.0",
+    "husky": "^9.0.11",
+    "jsdoc": "^4.0.3",
+    "prettier": "^3.3.2"
+  }
+}

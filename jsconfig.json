@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "baseUrl": ".",
+        "checkJs": true,
+        "strict": true,
+        "moduleResolution": "Node",
+        "resolveJsonModule": true,
+        "types": [
+            "bun"
+        ],
+        "paths": {
+            "#config": [
+                "./src/config.js"
+            ],
+            "#types": [
+                "./@types/index.d.ts"
+            ],
+            "#db": [
+                "./src/db.js"
+            ],
+        }
+    }
+}

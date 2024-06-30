@@ -1,0 +1,31 @@
+name: test
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "develop", "master" ]
+  pull_request:
+    branches: [ "develop", "master" ]
+
+jobs:
+  test:
+    name: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/develop'
+    steps:
+
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: set environment variables
+        run: |
+          touch .env
+          echo "TURSO_URL=${{ secrets.TURSO_URL }}" >> .env
+          echo "TURSO_TOKEN=${{ secrets.TURSO_TOKEN }}" >> .env
+
+      - name: install dependencies and test
+        run: |
+          bun install
+          bun test
