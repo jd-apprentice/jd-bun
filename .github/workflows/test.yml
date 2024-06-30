@@ -23,7 +23,7 @@ jobs:
         run: |
           touch .env
           echo "TURSO_URL=${{ secrets.TURSO_URL }}" >> .env
-          echo "TURSO_TOKEN=${{ secrets.TURSO_TOKEN }}" >> .env
+          echo "TURSO_DB_TOKEN=${{ secrets.TURSO_DB_TOKEN }}" >> .env
 
       - name: install dependencies and test
         run: |
