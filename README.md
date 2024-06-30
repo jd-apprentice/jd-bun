@@ -4,9 +4,8 @@ Sample bun template with Turso DB, eslint, prettier, docker, husky, sonarjs, tes
 
 ## 🧰 Requirements
 
-- Bun
-- Docker
-- Turso
+- Bun (^1.1.13)
+- Docker (optional)
 
 ## 💾 Instalation
 
@@ -17,15 +16,29 @@ Make sure to complete the `.env` file with the following information:
 | TURSO_URL | Turso url |
 | TURSO_DB_TOKEN | Turso db token |
 
-Simple way to install is to simply run the following command:
+Change the default names with the following script:
+
+```bash
+bun run replace     
+$ bash ./scripts/app_name.sh
+Enter the new name: sample
+Replacement completed. 🚀
+```
+
+This will replace all `app_name` with `sample` in the project.
+
+### Run with Bun 🧅
 
 ```bash
 git clone https://github.com/jd-apprentice/jd-bun && cd jd-bun
 make
-./lib/app_name
 ```
 
-More manual way:
+This will build the app with bunjs and execute the binary.
+
+### Run with Docker 🐳
+
+Bun still needs to be installed to build the binary.
 
 1. Clone the repository
 
@@ -37,10 +50,13 @@ git clone https://github.com/jd-apprentice/jd-bun && cd jd-bun
 
 ```bash
 bun install
+bun test (optional)
 bun run build
 ```
 
 3. Build the image manually
+
+Remember to replace `app_name` with the name of your app.
 
 ```bash
 docker build -f docker/base-x86_64.Dockerfile -t app_bin .

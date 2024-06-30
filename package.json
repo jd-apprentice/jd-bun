@@ -26,7 +26,8 @@
     "lint:fix": "eslint ./src/*.js --fix",
     "format": "prettier --check ./src/*.js",
     "format:write": "prettier --write ./src/*.js",
-    "prepare": "husky"
+    "prepare": "husky",
+    "replace": "bash ./scripts/replace.sh"
   },
   "type": "module",
   "devDependencies": {
