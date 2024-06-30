@@ -17,9 +17,9 @@
   "keywords": [],
   "license": "MIT",
   "scripts": {
-    "build": "bun build ./app.js --compile --outfile lib/app_name",
+    "build": "bun build ./src/index.js --compile --outfile lib/app_name",
     "start": "bun lib/app_name",
-    "dev": "bun --watch app.js",
+    "dev": "bun --watch ./src/index.js",
     "test": "bun test --coverage",
     "docs": "jsdoc ./src/*.js -d ./docs",
     "lint": "eslint ./src/*.js",

@@ -1,0 +1,30 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "jd-apprentice",
+      "name": "Jonathan Dyallo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/68082746?v=4",
+      "profile": "https://jonathan.com.ar",
+      "contributions": [
+        "code",
+        "test",
+        "doc",
+        "maintenance",
+        "design",
+        "ideas",
+        "infra"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "jd-bun",
+  "projectOwner": "jd-apprentice",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}

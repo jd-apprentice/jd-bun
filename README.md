@@ -1,5 +1,7 @@
 # 🧅 Bun template
 
+[![All Contributors](https://img.shields.io/github/all-contributors/jd-apprentice/jd-bun?color=ee8449&style=flat-square)](#contributors)
+
 Sample bun template with Turso DB, eslint, prettier, docker, husky, sonarjs, testing with coverage, and more.
 
 ## 📚 Features
@@ -25,6 +27,30 @@ Sample bun template with Turso DB, eslint, prettier, docker, husky, sonarjs, tes
 
 ## 💾 Instalation
 
+To install BUN, do the following:
+
+```shell
+curl -fsSL https://bun.sh/install | bash
+```
+
+Now we are going to do a bun create with this template.
+
+Just in case, here are additiona flags for the bun create command:
+
+```shell
+--force	Overwrite existing files
+--no-install	Skip installing node_modules & tasks
+--no-git	Don’t initialize a git repository
+--open	Start & open in-browser after finish
+```
+
+```shell
+mkdir your_app
+bun create github.com/jd-apprentice/jd-bun your_app
+cd your_app
+cp .env.example .env
+```
+
 Make sure to complete the `.env` file with the following information:
 
 | Variable | Description |
@@ -46,7 +72,6 @@ This will replace all `app_name` with `sample` in the project.
 ### Run with Bun 🧅
 
 ```bash
-git clone https://github.com/jd-apprentice/jd-bun && cd jd-bun
 make
 ```
 
@@ -56,13 +81,7 @@ This will build the app with bunjs and execute the binary.
 
 Bun still needs to be installed to build the binary.
 
-1. Clone the repository
-
-```bash
-git clone https://github.com/jd-apprentice/jd-bun && cd jd-bun
-```
-
-2. Prepare the binary
+1. Prepare the binary
 
 ```bash
 bun install
@@ -70,7 +89,7 @@ bun test (optional)
 bun run build
 ```
 
-3. Build the image manually
+2. Build the image manually
 
 Remember to replace `app_name` with the name of your app.
 
@@ -79,3 +98,20 @@ docker build -f docker/base-x86_64.Dockerfile -t app_bin .
 docker build -f docker/app.Dockerfile -t app_name .
 docker compose up -d
 ```
+
+## 🤝 Contribute
+
+- For more information, check the [CONTRIBUTE](./CONTRIBUTE.md) file
+
+## ✨ Contributors 
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://jonathan.com.ar/es"><img src="https://avatars.githubusercontent.com/u/68082746?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jonathan Dyallo</b></sub></a><br /><a href="https://github.com/jd-apprentice/waifuland-api/commits?author=jd-apprentice" title="Code">💻</a> <a href="https://github.com/jd-apprentice/waifuland-api/commits?author=jd-apprentice" title="Tests">⚠️</a> <a href="https://github.com/jd-apprentice/waifuland-api/commits?author=jd-apprentice" title="Documentation">📖</a> <a href="#maintenance-jd-apprentice" title="Maintenance">🚧</a></td>
+  </tr>
+</table>
