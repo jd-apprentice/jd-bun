@@ -1,0 +1,76 @@
+name: test and analyze
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "develop", "master" ]
+    paths:
+      - 'src/**'
+      - '__tests__/**'
+  pull_request:
+    branches: [ "develop", "master" ]
+    paths:
+      - 'src/**'
+      - '__tests__/**'
+
+
+jobs:
+  test:
+    name: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/develop'
+    steps:
+
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: set environment variables
+        run: |
+          touch .env
+          echo "TURSO_URL=${{ secrets.TURSO_URL }}" >> .env
+          echo "TURSO_DB_TOKEN=${{ secrets.TURSO_DB_TOKEN }}" >> .env
+
+      - name: install dependencies and test
+        run: |
+          bun install
+          bun test
+  
+  analyze:
+    name: Analyze (${{ matrix.language }})
+    needs: [test]
+    runs-on: ${{ (matrix.language == 'swift' && 'macos-latest') || 'ubuntu-latest' }}
+    timeout-minutes: ${{ (matrix.language == 'swift' && 120) || 360 }}
+    permissions:
+      security-events: write
+      packages: read
+      actions: read
+      contents: read
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+        - language: javascript-typescript
+          build-mode: none
+          
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v3
+      with:
+        languages: ${{ matrix.language }}
+        build-mode: ${{ matrix.build-mode }}
+
+    - if: matrix.build-mode == 'manual'
+      shell: bash
+      run: |
+        echo 'If you are using a "manual" build mode for one or more of the' \
+          'languages you are analyzing, replace this with the commands to build' \
+          'your code, for example:'
+        echo '  make bootstrap'
+        echo '  make release'
+        exit 1
