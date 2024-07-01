@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeAll } from 'bun:test';
-import { config } from '#config';
+import { config } from 'src/config/config';
 
 describe('config object', () => {
 

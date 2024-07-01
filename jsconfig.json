@@ -11,13 +11,13 @@
         ],
         "paths": {
             "#config": [
-                "./src/config.js"
+                "./src/config/config.js"
             ],
             "#types": [
                 "./@types/index.d.ts"
             ],
             "#db": [
-                "./src/db.js"
+                "./src/database/db.js"
             ],
         }
     }

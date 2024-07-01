@@ -3,7 +3,7 @@ import { LibsqlDialect } from '@libsql/kysely-libsql';
 import { Kysely } from 'kysely';
 
 import { db } from '#db';
-import { config } from '#config';
+import { config } from 'src/config/config';
 import { createTable, dropTable } from './utils/sql';
 
 describe('db file', () => {

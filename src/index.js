@@ -38,11 +38,23 @@
  *
  * // Output: Hello World!
  */
-
 export class SampleApp {
   constructor() {}
 
   sampleMethod() {
     return 'Hello World!';
   }
+}
+
+/**
+ * @description A sample function
+ * @returns {string} A greeting message
+ * @example
+ *
+ * console.log(sampleApp());
+ *
+ * // Output: Hello World!
+ */
+export function sampleApp() {
+  return 'Hello World!';
 }
