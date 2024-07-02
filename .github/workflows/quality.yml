@@ -13,7 +13,6 @@ on:
       - 'src/**'
       - '__tests__/**'
 
-
 jobs:
   test:
     name: test
