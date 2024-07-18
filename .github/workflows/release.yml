@@ -1,4 +1,4 @@
-name: test and analyze
+name: test, analyze and publish
 
 on:
   workflow_dispatch:
@@ -12,6 +12,9 @@ on:
     paths:
       - 'src/**'
       - '__tests__/**'
+
+permissions:
+  contents: write
 
 jobs:
   test:
@@ -73,3 +76,20 @@ jobs:
         echo '  make bootstrap'
         echo '  make release'
         exit 1
+
+  release:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Parse Unreleased from Changelog
+        run: echo "::set-env name=UNRELEASED::$(awk '/## \[Unreleased\]/,/^## /' CHANGELOG.md)"
+
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            ${{ env.UNRELEASED }}
+            LICENSE
