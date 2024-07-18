@@ -16,6 +16,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Documentation now being generated only on master branch
+
 ### Removed
 
 ## [1.0.0] 18-07-2024
