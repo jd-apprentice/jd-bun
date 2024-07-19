@@ -16,9 +16,6 @@ on:
 permissions:
   contents: write
 
-env:
-  ACTIONS_ALLOW_UNSECURE_COMMANDS: true
-
 jobs:
   test:
     name: test
@@ -87,8 +84,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Parse Unreleased from Changelog
-        run: echo "::set-env name=UNRELEASED::$(awk '/## \[Unreleased\]/,/^## /' CHANGELOG.md)"
+      - name: Set UNRELEASED env variable
+        run: echo "UNRELEASED=$(awk '/## \[Unreleased\]/,/^## /' CHANGELOG.md)" >> $GITHUB_ENV
 
       - name: Release
         uses: softprops/action-gh-release@v2
