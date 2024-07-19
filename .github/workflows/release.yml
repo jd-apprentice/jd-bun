@@ -16,6 +16,9 @@ on:
 permissions:
   contents: write
 
+env:
+  ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+
 jobs:
   test:
     name: test
