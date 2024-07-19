@@ -67,13 +67,11 @@ jobs:
         build-mode: ${{ matrix.build-mode }}
 
   release:
-    runs-on: ubuntu-latest
+    uses: jd-apprentice/jd-workflows/.github/workflows/release.yml@main
     needs: [test, analyze]
     if: github.ref == 'refs/heads/master'
-    steps:
-
-      - uses: jd-apprentice/jd-workflows/.github/workflows/release.yml@main
-        with:
-          name: 'test, analyze and publish'
-        secrets:
-          gh_token: ${{ secrets.GITHUB_TOKEN }}
+    with:
+      name: 'test, analyze and publish'
+      runs-on: ubuntu-latest
+    secrets:
+      gh_token: ${{ secrets.GITHUB_TOKEN }}
