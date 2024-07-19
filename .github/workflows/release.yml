@@ -71,7 +71,7 @@ jobs:
     needs: [test, analyze]
     if: github.ref == 'refs/heads/master'
     with:
-      name: 'test, analyze and publish'
+      name: test, analyze and publish
       runs_on: ubuntu-latest
     secrets:
       gh_token: ${{ secrets.GITHUB_TOKEN }}
