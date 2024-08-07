@@ -1,0 +1,7 @@
+{
+    "recommendations": [
+        "SonarSource.sonarlint-vscode",
+        "snyk-security.snyk-vulnerability-scanner",
+        "ms-azuretools.vscode-docker"
+    ]
+}

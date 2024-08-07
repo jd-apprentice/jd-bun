@@ -7,20 +7,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## 0.2.0 - 07-08-2024
+
+### Added
+
+- `CODEOWNERS` file
+- .vscode folder with `extensions.json` file
+- `estlingPluginSecurity` in eslint.config.js
+
+### Removed
+
+- `dotenv` from dependencies in `package.json`
+
+## 0.1.0 - 19-07-2024
+
 ### Added
 
 - Add `CHANGELOG.md` file
 - Release Pipeline
 
-### Fixed
-
 ### Changed
 
 - Documentation now being generated only on master branch
 
-### Removed
-
-## [1.0.0] 18-07-2024
+## [0.0.1] 18-07-2024
 
 ### Added
 

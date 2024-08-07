@@ -1,11 +1,10 @@
 {
   "name": "app_name",
-  "version": "1.0.0",
+  "version": "0.2.0",
   "author": "Jonathan Dyallo",
   "main": "lib/app_name",
   "dependencies": {
     "@libsql/kysely-libsql": "^0.3.0",
-    "dotenv": "^16.4.5",
     "kysely": "^0.27.3"
   },
   "description": "template for a bun project",
@@ -38,6 +37,7 @@
     "esdoc-standard-plugin": "^1.0.0",
     "eslint": "9.x",
     "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-security": "^3.0.1",
     "eslint-plugin-sonarjs": "^1.0.3",
     "globals": "^15.6.0",
     "husky": "^9.0.11",
