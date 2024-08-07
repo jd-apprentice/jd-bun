@@ -10,6 +10,7 @@ Sample bun template with Turso DB, eslint, prettier, docker, husky, sonarjs, tes
 - ✅ [Kysely](https://www.kysely.dev/)
 - ✅ [Eslint](https://eslint.org/)
 - ✅ [eslint-sonarjs](https://github.com/SonarSource/eslint-plugin-sonarjs)
+- ✅ [eslint-plugin-security](https://github.com/eslint-community/eslint-plugin-security)
 - ✅ [Prettier](https://prettier.io/)
 - ✅ [Husky](https://typicode.github.io/husky/)
 - ✅ [Esdoc](https://esdoc.org/)
