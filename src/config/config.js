@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 export const config = {
   db: {
     url: process.env.TURSO_URL,
