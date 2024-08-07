@@ -39,8 +39,6 @@
  * // Output: Hello World!
  */
 export class SampleApp {
-  constructor() {}
-
   sampleMethod() {
     return 'Hello World!';
   }
