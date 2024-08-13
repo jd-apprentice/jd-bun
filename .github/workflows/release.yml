@@ -20,7 +20,6 @@ jobs:
   test:
     name: test
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/develop'
     steps:
 
       - uses: actions/checkout@v4
