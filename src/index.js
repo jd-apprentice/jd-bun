@@ -39,6 +39,9 @@
  * // Output: Hello World!
  */
 export class SampleApp {
+  /**
+   * @returns {string} A greeting message
+   */
   sampleMethod() {
     return 'Hello World!';
   }
