@@ -1,23 +1,14 @@
-import { SampleApp } from "src";
-import { describe, it, expect, beforeAll } from 'bun:test';
+import { sampleApp } from "src";
+import { describe, it, expect } from 'bun:test';
 
-describe("SampleApp Class", () => {
+describe("sampleApp Function", () => {
 
-    /**
-     * @type {SampleApp}
-     */
-    let sampleApp;
-
-    beforeAll(() => {
-        sampleApp = new SampleApp();
-    });
-
-    it("should be an instance of SampleApp", () => {
-        expect(sampleApp).toBeInstanceOf(SampleApp);
+    it("should be a function", () => {
+        expect(sampleApp).toBeInstanceOf(Function);
     });
 
     it("should have a method called 'sampleMethod'", () => {
-        expect(sampleApp.sampleMethod).toBeInstanceOf(Function);
-        expect(sampleApp.sampleMethod()).toBe("Hello World!");
+        expect(sampleApp).toBeInstanceOf(Function);
+        expect(sampleApp()).toBe("Hello World!");
     });
 });
