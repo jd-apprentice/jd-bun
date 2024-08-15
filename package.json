@@ -1,10 +1,11 @@
 {
   "name": "app_name",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "author": "Jonathan Dyallo",
   "main": "lib/app_name",
   "dependencies": {
-    "@libsql/kysely-libsql": "^0.3.0",
+    "@libsql/kysely-libsql": "^0.4.1",
+    "@sentry/bun": "^8.26.0",
     "joi": "^17.13.3",
     "kysely": "^0.27.3"
   },
@@ -25,7 +26,7 @@
     "lint": "eslint ./src/*.js",
     "lint:fix": "eslint ./src/*.js --fix",
     "format": "prettier --check ./src/*.js",
-    "format:write": "prettier --write ./src/*.js",
+    "format:fix": "prettier --write ./src/*.js",
     "prepare": "husky",
     "replace": "bash ./scripts/replace.sh"
   },

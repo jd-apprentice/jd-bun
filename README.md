@@ -16,6 +16,7 @@ Sample bun template with Turso DB, eslint, prettier, docker, husky, sonarjs, tes
 - ✅ [Esdoc](https://esdoc.org/)
 - ✅ [CodeQL](https://codeql.github.com/)
 - ✅ [Joi](https://joi.dev/)
+- ✅ [Sentry](https://sentry.io/)
 - ✅ Jsconfig with checkjs and strict
 - ✅ Docker ready
 - ✅ Bun ready
